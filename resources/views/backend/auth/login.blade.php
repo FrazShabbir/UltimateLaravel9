@@ -41,6 +41,20 @@
                           <div class="sign-in-from">
                               <h1 class="mb-0 text-center">Sign in</h1>
                               <p class="text-center text-dark">Enter your email address and password to access admin panel.</p>
+                              @if (count($errors) > 0)
+                              @foreach ($errors->all() as $error)
+
+                              <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                                  {{ $error }}
+                              </div>
+                              @endforeach
+                              @endif
+                              @if (Session::has('error'))
+                              <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                                  {{ Session::get('error') }}
+                              </div>
+                              @endif
+                         
                               <form class="mt-4" method="POST" action="{{ route('login') }}">
                                 @csrf
                                   <div class="form-group">

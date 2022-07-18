@@ -14,6 +14,7 @@ use App\Models\User;
 use Illuminate\Validation\Rules;
 use Illuminate\Support\Facades\Password;
 use App\Models\Designation;
+use Illuminate\Support\Str;
 class UserController extends Controller
 {
     /**
@@ -65,14 +66,20 @@ class UserController extends Controller
         $request->validate([
             'first_name' => ['required', 'string', 'max:255'],
             'last_name' => ['required', 'string', 'max:255'],
-            'username' => ['required', 'string', 'max:255','unique:users'],
+            'username' => ['required', 'string', 'max:255'],
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
             // 'password' => ['required', 'confirmed', Rules\Password::defaults()],
         ]);
+        $username = str_replace(' ', '-', $request->username);
+        // check username exist
+        $usernamefind = User::where('username', $username)->first();
+        if ($usernamefind) {
+            $username = $username.'-'.str_random(2);
+        }
         $user = User::create([
             'first_name' => $request->first_name,
             'last_name' => $request->last_name,
-            'username' => $request->username,
+            'username' => $username,
             'status' => $request->status,
             'email' => $request->email,
             'designation_id' => $request->designation_id,
@@ -154,13 +161,13 @@ class UserController extends Controller
             'first_name' => ['required', 'string', 'max:255'],
             'last_name' => ['required', 'string', 'max:255'],
             'email' => 'required|email|unique:users,email,'.$user->id,
-            'username' => 'required|unique:users,username,'.$user->id,
+            // 'username' => 'required|unique:users,username,'.$user->id,
             // 'password' => ['required', 'confirmed', Rules\Password::defaults()],
         ]);
 
         $user->first_name = $request->first_name;
         $user->last_name = $request->last_name;
-        $user->username = $request->username;
+        // $user->username = $request->username;
         $user->email = $request->email;
         $user->status = $request->status;
         $user->designation_id = $request->designation_id;

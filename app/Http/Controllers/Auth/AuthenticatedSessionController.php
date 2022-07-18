@@ -7,7 +7,7 @@ use App\Http\Requests\Auth\LoginRequest;
 use App\Providers\RouteServiceProvider;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
-
+use Session;
 class AuthenticatedSessionController extends Controller
 {
     /**
@@ -29,10 +29,16 @@ class AuthenticatedSessionController extends Controller
     public function store(LoginRequest $request)
     {
         $request->authenticate();
+        if (Auth::user()->status == 1 ) {
+            $request->session()->regenerate();
+            return redirect()->intended(RouteServiceProvider::HOME);
+        } elseif(Auth::user()->status == 0 ) {
+            Auth::guard('web')->logout();
+            $request->session()->invalidate();
+            Session::flash('error','Your Account is not Active. Please Contact Admin');
+            return view('backend.auth.login');
 
-        $request->session()->regenerate();
-
-        return redirect()->intended(RouteServiceProvider::HOME);
+        }
     }
 
     /**

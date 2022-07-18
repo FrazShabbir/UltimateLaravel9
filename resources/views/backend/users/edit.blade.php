@@ -91,7 +91,7 @@
                             <div class="col-md-3 col-sm-12">
                                 <div class="form-group">
                                     {{-- <label for="exampleFormControlSelect1">Select Input</label> --}}
-                                    <select class="form-control" id="exampleFormControlSelect1">
+                                    <select class="form-control" id="exampleFormControlSelect1" name="status" required>
                                        <option selected="" disabled="">Select Status</option>
                                         <option  value="1" {{$user->status==1?'selected':''}}>Active</option>
                                         <option value="0" {{$user->status==0?'selected':''}}>In Active</option>

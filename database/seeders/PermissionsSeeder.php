@@ -18,7 +18,7 @@ class PermissionsSeeder extends Seeder
      */
     public function run()
     {
-        $permissions = config('fdd.permissions');
+        $permissions = config('essentials.permissions');
         foreach ($permissions as $key => $value) {
             foreach ($permissions[$key] as $permission) {
                 $find = Permission::where('name', $permission)->first();
