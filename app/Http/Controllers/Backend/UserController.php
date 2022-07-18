@@ -105,7 +105,7 @@ class UserController extends Controller
 
         // return redirect()->route('user.edit', $id);
 
-        $user = User::find($id);
+        $user = User::findOrFail($id);
         $roles = Role::where('role_for','ar')->get();
 
         return view('backend.users.show')
@@ -127,7 +127,7 @@ class UserController extends Controller
             abort(403);
         }
 
-        $user = User::find($id);
+        $user = User::findOrFail($id);
         $roles = Role::where('role_for','Admin')->get();
         $designations = Designation::all();
         return view('backend.users.edit')
@@ -148,7 +148,7 @@ class UserController extends Controller
         if (! auth()->user()->hasPermissionTo('Update Users')) {
             abort(403);
         }
-        $user = User::find($id);
+        $user = User::findOrFail($id);
 
         $request->validate([
             'first_name' => ['required', 'string', 'max:255'],

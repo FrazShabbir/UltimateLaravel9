@@ -43,7 +43,7 @@
 
 
                                 <button type="submit" class="btn btn-primary mr-3">Submit</button>
-                                <a href="{{ route('fund-heads.index') }}" class="btn iq-bg-danger">Home</a>
+                                <a href="{{ route('designations.index') }}" class="btn iq-bg-danger">Home</a>
                            
                         </div>
                     </div>

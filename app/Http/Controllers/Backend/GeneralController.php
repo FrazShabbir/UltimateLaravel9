@@ -83,7 +83,10 @@ class GeneralController extends Controller
             //'image' => 'image|mimes:jpeg,png,jpg,gif,svg|max:2048',
         ]);
 
-        $user = User::find(auth()->user()->id);
+        $user = User::findOrFail(auth()->user()->id);
+        // if(Auth::user()->id!=$user->id){
+        //     return redirect()->back()->with('error', 'You are not authorized to perform this action.');
+        // }
         $user->first_name = $request->first_name;
         $user->last_name = $request->last_name;
         $user->username = $request->username;

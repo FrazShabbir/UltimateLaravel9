@@ -76,7 +76,7 @@ class RoleController extends Controller
         if (! auth()->user()->hasPermissionTo('Read Roles')) {
             abort(403);
         }
-        $role = Role::find($id);
+        $role = Role::findOrFail($id);
 
         //$users = User::hasRole($role->name)->get();
         // dd($role->users);
@@ -94,7 +94,7 @@ class RoleController extends Controller
         if (! auth()->user()->hasPermissionTo('Update Roles')) {
             abort(403);
         }
-        $role = Role::find($id);
+        $role = Role::findOrFail($id);
         return view('backend.roles.edit')->withRole($role);
     }
 
@@ -110,7 +110,7 @@ class RoleController extends Controller
         if (! auth()->user()->hasPermissionTo('Update Roles')) {
             abort(403);
         }
-        $role = Role::find($id);
+        $role = Role::findOrFail($id);
 
         $role->name = $request->name;
         $role->save();
@@ -135,7 +135,7 @@ class RoleController extends Controller
             abort(403);
         }
 
-        $role = Role::find($id);
+        $role = Role::findOrFail($id);
         $users = User::role($role->name)->get();
         if ($users->count()==0) {
             $role->delete();

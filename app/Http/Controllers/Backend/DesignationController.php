@@ -70,7 +70,7 @@ class DesignationController extends Controller
      */
     public function show($id)
     {
-        $designation = Designation::where('code',$id)->first();
+        $designation = Designation::where('code',$id)->firstOrFail();
         return view('backend.designations.show')
         ->withDesignation($designation);
     }
@@ -83,7 +83,7 @@ class DesignationController extends Controller
      */
     public function edit($id)
     {
-        $designation = Designation::where('code',$id)->first();
+        $designation = Designation::where('code',$id)->firstOrFail();
         return view('backend.designations.edit')
         ->withDesignation($designation);
     }
@@ -103,7 +103,7 @@ class DesignationController extends Controller
                 'description'=>'required'
             ]);
     
-            $designation = Designation::where('code', $id)->first();
+            $designation = Designation::where('code', $id)->firstOrFail();
             $designation->name = $request->name;
             $designation->description = $request->description;
             $designation->updated_by = Auth::user()->id;
