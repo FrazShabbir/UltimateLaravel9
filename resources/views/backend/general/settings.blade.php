@@ -10,10 +10,14 @@
 
 
 @section('content')
-    <div class="content-page" id="content-page">
-        <div class="container-fluid">
-            <div class="row">
+
+    <div class="content-page" id="content-page" >
+        <div class="container-fluid ">
+            <div class="row ">
+              
                 <div class="col-12">
+                    <div class="iq-card">
+                    <div class="iq-card-body px-4">
                     <div class="">
                         <ul class="nav nav-tabs" id="myTab" role="tablist">
                             <li class="nav-item">
@@ -138,6 +142,9 @@
                         </div>
                     </div>
                 </div>
+                    </div>
+                </div>
+                
             </div>
         </div>
     </div>

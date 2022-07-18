@@ -33,7 +33,7 @@
                                 $roleName = $role->name ;
                             @endphp
                             <div class="mt-5 mb-4">
-                                @foreach (config('fdd.permissions') as $key => $permission)
+                                @foreach (config('essentials.permissions') as $key => $permission)
                                     <div class="row">
                                         <div class="col-lg-2 col-md-2 col-sm-12">
                                             <div class="mt-2 mb-3">
