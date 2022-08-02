@@ -52,7 +52,7 @@ Route::group(['middleware' => ['auth'], 'prefix' => 'dashboard'],function () {
 
 
 
-    Route::resource('designations', DesignationController::class);
+    //Route::resource('designations', DesignationController::class);
     Route::get('designations', [DesignationController::class, 'index'])->name('designations.index')->middleware(['can:Read Designations']);
     Route::get('designation/create', [DesignationController::class, 'create'])->name('designations.create')->middleware(['can:Create Designations']);
     Route::post('designation/create/save', [DesignationController::class, 'store'])->name('designations.store')->middleware(['can:Create Designations']);

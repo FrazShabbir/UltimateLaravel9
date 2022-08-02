@@ -1,4 +1,4 @@
-<p align="center"><a href="https://frazshabbir.com" target="_blank"><img src="https://i.ibb.co/nLqcWjS/fs-logo.pn" width="400"></a></p>
+<p align="center"><a href="https://frazshabbir.com" target="_blank"><img src="https://i.ibb.co/nLqcWjS/fs-logo.png" width="400"></a></p>
 
 ## About This Boilerplate
 
