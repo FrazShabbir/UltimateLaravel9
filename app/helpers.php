@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\App;
 use Illuminate\Support\Facades\Auth;
 use App\Models\User;
 use App\Models\GeneralSetting;
+use App\Models\Slide;
 
 if (! function_exists('fromSettings')) {
     function fromSettings(string $key, $alternative = null)
@@ -137,5 +138,13 @@ if (! function_exists('getStatus')) {
         } else {
             return 'Contact Support';
         }
+    }
+}
+
+if (! function_exists('getSlider')) {
+    function getSlider()
+    {
+        $slides = Slide::all();
+        return $slides;
     }
 }

@@ -5,7 +5,7 @@
       <!-- Required meta tags -->
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-      <title>FDD | {{fromSettings('site_title')}}</title>
+      <title>{{fromSettings('short_title')}} | {{fromSettings('site_title')}}</title>
       <!-- Favicon -->
       <link rel="shortcut icon" href="images/favicon.ico" />
       <!-- Bootstrap CSS -->
@@ -81,24 +81,17 @@
                       </div>
                       <div class="col-md-7 text-center sign-in-page-image">
                           <div class="sign-in-detail text-white">
-                            <a class="sign-in-logo mb-5" href="#"><img src="{{asset('backend/images/fs_logo.png')}}" class="img-fluid" alt="logo"></a>
-                              <div class="owl-carousel" data-autoplay="true" data-loop="true" data-nav="false" data-dots="true" data-items="1" data-items-laptop="1" data-items-tab="1" data-items-mobile="1" data-items-mobile-sm="1" data-margin="0">
-                                  <div class="item">
-                                      <img src="{{asset('backend/images/login/1.png')}}" class="img-fluid mb-4" alt="logo">
-                                      <h4 class="mb-1 text-white">Find new friends</h4>
-                                      <p>It is a long established fact that a reader will be distracted by the readable content.</p>
-                                  </div>
-                                  <div class="item">
-                                      <img src="{{asset('backend/images/login/1.png')}}" class="img-fluid mb-4" alt="logo"> 
-                                      <h4 class="mb-1 text-white">Connect with the world</h4>
-                                      <p>It is a long established fact that a reader will be distracted by the readable content.</p>
-                                  </div>
-                                  <div class="item">
-                                      <img src="{{asset('backend/images/login/1.png')}}" class="img-fluid mb-4" alt="logo">
-                                      <h4 class="mb-1 text-white">Create new events</h4>
-                                      <p>It is a long established fact that a reader will be distracted by the readable content.</p>
-                                  </div>
-                              </div>
+                            <a class="sign-in-logo mb-5" href="{{route('login')}}"><img src="{{asset(fromSettings('logo')??'backend/images/logo-full.png')}}" class="img-fluid" alt="logo"></a>
+                            <div class="owl-carousel" data-autoplay="true" data-loop="true" data-nav="false" data-dots="true" data-items="1" data-items-laptop="1" data-items-tab="1" data-items-mobile="1" data-items-mobile-sm="1" data-margin="0">
+                                @foreach (getSlider() as $i)
+                                       <div class="item ">
+                                           <img src="{{ asset($i->image) }}" class="img-fluid mb-4 text-center"
+                                               alt="logo" style="max-height:400px;">
+                                           <h4 class="mb-1 text-white">{{ucfirst($i->title)}}</h4>
+                                           <p>{{ucfirst($i->description)}}</p>
+                                       </div>
+                                   @endforeach
+                             </div>
                           </div>
                       </div>
                     </div>

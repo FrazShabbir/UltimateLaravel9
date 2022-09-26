@@ -1,5 +1,5 @@
 @extends('backend.main')
-@section('title', 'Title')
+@section('title', 'Title - FrazShabbirAdminDash')
 
 @section('styles')
 @endsection

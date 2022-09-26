@@ -1,5 +1,5 @@
 @extends('backend.main')
-@section('title', 'Create User - FDD')
+@section('title', 'Create User - FrazShabbirAdminDash')
 
 @section('styles')
 @endsection

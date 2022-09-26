@@ -64,12 +64,12 @@
                     class="las la-user-tie iq-arrow-left"></i><span>Designations</span><i
                     class="ri-arrow-right-s-line iq-arrow-right"></i></a>
             <ul id="designations" class="iq-submenu collapse" data-parent="#iq-sidebar-toggle" style="">
-                @can('Create Fundheads')
+                @can('Create Designations')
                     <li class="{{ request()->route()->getName() == 'designations.create'? 'active': '' }}"><a
                             href="{{ route('designations.create') }}"><i class="las la-plus-circle"></i>Add
                             Designation</a></li>
                 @endcan
-                @can('Read Fundheads')
+                @can('Read Designations')
                     <li class="{{ request()->route()->getName() == 'designations.index'? 'active': '' }}"><a
                             href="{{ route('designations.index') }}"><i class="las la-th-list"></i>All Designations</a>
                     </li>
@@ -77,6 +77,33 @@
             </ul>
         </li>
         {{-- Designations Edn --}}
+
+        <li @if (in_array(request()->route()->getName(),
+            ['slider.index', 'slider.create'])) class="active" @endif>
+            <a href="#slides" class="iq-waves-effect" data-toggle="collapse"
+                @if (in_array(request()->route()->getName(),
+                    ['slider.index','slider.create'])) aria-expanded="true" @else aria-expanded="false" @endif><span
+                    class="ripple rippleEffect"></span><i class="las la-sliders-h iq-arrow-left"></i><span>Manage
+                    Slides</span><i class="ri-arrow-right-s-line iq-arrow-right"></i></a>
+
+            <ul id="slides" class="iq-submenu collapse" data-parent="#iq-sidebar-toggle" style="">
+
+
+
+
+                <li class="{{ request()->route()->getName() == 'slider.index'? 'active': '' }}"><a
+                        href="{{ route('slider.index') }}"><i class="las la-sliders-h"></i>Manage Slider</a>
+                </li>
+
+                <li class="{{ request()->route()->getName() == 'slider.create'? 'active': '' }}"><a
+                        href="{{ route('slider.create') }}"><i class="las la-sliders-h"></i>ADD Slide</a>
+                </li>
+
+
+            </ul>
+
+
+        </li>
 
 
         {{-- SETTINGS ONLY FOR ADMIN AND SUPERADMIN --}}

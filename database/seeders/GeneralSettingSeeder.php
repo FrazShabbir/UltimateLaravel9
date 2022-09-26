@@ -20,7 +20,7 @@ class GeneralSettingSeeder extends Seeder
         ]);
         GeneralSetting::create([
             'key'=>'short_title',
-            'value'=>'FDD'
+            'value'=>'FSAD'
         ]);
         GeneralSetting::create([
             'key'=>'copyrights',
