@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\Home\HomeController;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,13 +14,11 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    if (auth()->check()) {
-        return redirect(url('/dashboard'));
-    } else {
-        return redirect('/login');
-    }
-});
+
+
+Route::get('/',[HomeController::class,'index'])->name('public.index');
+Route::get('about',[HomeController::class,'about'])->name('public.about');
+Route::get('contact',[HomeController::class,'contact'])->name('public.contact');
 
 
 require __DIR__.'/auth.php';
