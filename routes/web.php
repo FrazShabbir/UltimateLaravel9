@@ -17,7 +17,7 @@ use App\Http\Controllers\Home\HomeController;
 
 
 Route::get('/',[HomeController::class,'index'])->name('public.index');
-Route::get('about',[HomeController::class,'about'])->name('public.about');
+Route::get('products',[HomeController::class,'products'])->name('public.products');
 Route::get('contact',[HomeController::class,'contact'])->name('public.contact');
 
 

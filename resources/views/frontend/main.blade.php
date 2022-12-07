@@ -1,21 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    @include('frontend.partials._header')
 
-</head>
+@include('frontend.partials._header')
+
 <body>
-    <div id="cursor"></div>
-    <div id="cursor-border"></div>
-    <div class="body_wrapper">
-        {{-- Website Navbar will be Here --}}
+
+    <div class="body-wrapper">
+
         @include('frontend.partials._navbar')
-        {{-- Page Content Will be here --}}
+
+
         @yield('content')
+        <!-- Main Banner -->
+    
+@include('frontend.partials._footer')
+
     </div>
-    {{-- Website Footer Will be here --}}
-    @include('frontend.partials._footer')
-    {{-- Script tag and code will be here --}}
-    @include('frontend.partials._scripts')
+
+
+
+
+
+
+
+   @include('frontend.partials._scripts')
 </body>
+
 </html>

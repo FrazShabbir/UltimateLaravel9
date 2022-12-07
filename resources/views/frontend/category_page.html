@@ -1,0 +1,1413 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delmond ♡</title>
+
+    <!-- Bootstrap CSS Files -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+
+    <!-- FontAwesome 5 Pro CSS Files -->
+    <link rel="stylesheet" href="assets/css/all.css">
+
+    <!-- Owl Carousel CSS Files -->
+    <link rel="stylesheet" href="assets/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="assets/css/owl.theme.default.min.css">
+
+    <!-- Custom CSS Files -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+
+</head>
+
+<body>
+
+    <div class="body-wrapper">
+        <header>
+            <div class="top_nav d-none d-lg-block d-xl-block custom-bg-light py-3">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-6">
+                            <div class="country_flag_dropdown">
+                                <div class="dropdown">
+                                    <button class="btn border-0 dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                                        aria-expanded="false">
+                                        <span class="fi fi-sk me-2"></span>EN
+                                    </button>
+                                    <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item" href="#"><span class="fi fi-us me-2"></span>EN</a>
+                                        </li>
+                                        <li><a class="dropdown-item" href="#"><span class="fi fi-pk me-2"></span>PK</a>
+                                        </li>
+                                        <li><a class="dropdown-item" href="#"><span class="fi fi-sl me-2"></span>SL</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="text-end custom-dark-text d-flex justify-content-end align-items-center h-100">
+                                <a href="seller_profile.html" class="custom-dark-text">
+                                    <i class="far fa-user me-1"></i>
+                                    Prihlásiť sa
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="search_nav d-none d-lg-block d-xl-block py-3 border-bottom">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-3">
+                            <div class="d-flex align-items-center h-100 ">
+                                <a href="index.html">
+                                    <img src="assets/images/logo.png" alt="Logo">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="">
+                                <div class="input-group">
+                                    <div class="dropdown">
+                                        <button class="btn nav-search-dropdwn-btn dropdown-toggle" type="button"
+                                            data-bs-toggle="dropdown" aria-expanded="false">
+                                            Všetky kategórie
+                                        </button>
+                                        <ul class="dropdown-menu">
+                                            <li><a class="dropdown-item" href="#">Action</a></li>
+                                            <li><a class="dropdown-item" href="#">Another action</a></li>
+                                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                        </ul>
+                                    </div>
+                                    <input type="text" class="form-control nav-search" placeholder="Váš e-mail">
+                                    <span class="input-group-text">
+                                        <button data-bs-toggle="collapse" data-bs-target="#collapse_search_dropdown"
+                                            aria-expanded="false" aria-controls="collapse_search_dropdown" type="button"
+                                            class="btn border-0 nav-search-btn text-white h-100"><i
+                                                class="far fa-search"></i></button>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3">
+                            <div class="d-flex justify-content-end align-items-center h-100">
+                                <a onclick="cartToogle()" href="#">
+                                    <i class="fal fa-shopping-cart cart_icon position-relative">
+                                        <span
+                                            class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger cart_badge_fs">
+                                            5
+                                            <span class="visually-hidden">Products Added</span>
+                                        </span>
+                                    </i>
+                                    <span class="cart_price">125.00€</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="main_navbar">
+                <nav class="navbar navbar-expand-lg">
+                    <div class="container">
+                        <a class="navbar-brand d-lg-none" href="#">
+                            <img src="assets/images/logo.png" width="100px" alt="Logo">
+                        </a>
+                        <div class="ms-auto d-lg-none">
+                            <ul class="d-flex ms-auto mb-2 mb-lg-0">
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#" data-bs-toggle="collapse"
+                                        data-bs-target="#collapse_search" aria-expanded="false"
+                                        aria-controls="collapse_search">
+                                        <i class="far fa-search"></i>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">
+                                        <i class="far fa-user me-1"></i>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" onclick="cartToogle()" href="#">
+                                        <i class="fal fa-shopping-cart cart_icon position-relative">
+                                            <span
+                                                class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger cart_badge_fs">
+                                                5
+                                                <span class="visually-hidden">Products Added</span>
+                                            </span>
+                                        </i>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                            aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                                <li class="nav-item">
+                                    <a class="nav-link" href="category_page.html">All</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Today's Deals</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Customer Service</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="register.html">Registry</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Gift Cards</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="">Sell</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+            <!-- Cart Dropdown  -->
+            <div id="dropdown_id" class="rounded-0">
+                <div id="myDropdown" class="dropdown-content">
+
+                    <div class="card">
+                        <div class="container-fluid">
+                            <div class="row">
+                                <div class="col-12">
+                                    <h5 class="fw-bold pt-4 mb-4">Váš nákupný košík</h5>
+                                </div>
+                            </div>
+                            <div class="row px-3 mb-3">
+                                <div class="col-lg-2 col-md-2 col-sm-2 col-3 order-1">
+                                    <div class="d-flex align-items-center h-100">
+                                        <img class="w-100" src="assets/images/products/moj-product.png" alt="Mouse">
+                                    </div>
+                                </div>
+                                <div class="col-lg-7 col-md-7 col-sm-7 col-7 order-2">
+                                    <span id="card_font_values">HP Spectre x360 2-in-1 15.6" 4K Ultra
+                                        HD Touch ...</span><br>
+                                    <span id="card_font_values"
+                                        class="fw-bold d-sm-none d-lg-none d-md-none">19.80€</span>
+                                </div>
+                                <div
+                                    class="col-lg-2 col-md-2 col-sm-2 col-12 order-lg-3 order-md-3 order-sm-3 d-none d-md-block d-sm-block d-lg-block order-4">
+                                    <div class="d-flex align-items-center h-100">
+                                        <span id="card_font_values" class="fw-bold">19.80€</span>
+                                    </div>
+                                </div>
+                                <div class="col-lg-1 col-md-1 col-sm-1 col-2 order-lg-4 order-md-4 order-sm-4 order-3">
+                                    <div class="d-flex align-items-center h-100">
+                                        <span>
+                                            <i class="far fa-times text-muted"></i>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row px-3 mb-3">
+                                <div class="col-lg-2 col-md-2 col-sm-2 col-3 order-1">
+                                    <div class="d-flex align-items-center h-100">
+                                        <img class="w-100" src="assets/images/products/moj-product.png" alt="Mouse">
+                                    </div>
+                                </div>
+                                <div class="col-lg-7 col-md-7 col-sm-7 col-7 order-2">
+                                    <span id="card_font_values">HP Spectre x360 2-in-1 15.6" 4K Ultra
+                                        HD Touch ...</span><br>
+                                    <span id="card_font_values"
+                                        class="fw-bold d-sm-none d-lg-none d-md-none">19.80€</span>
+                                </div>
+                                <div
+                                    class="col-lg-2 col-md-2 col-sm-2 col-12 order-lg-3 order-md-3 order-sm-3 d-none d-md-block d-sm-block d-lg-block order-4">
+                                    <div class="d-flex align-items-center h-100">
+                                        <span id="card_font_values" class="fw-bold">19.80€</span>
+                                    </div>
+                                </div>
+                                <div class="col-lg-1 col-md-1 col-sm-1 col-2 order-lg-4 order-md-4 order-sm-4 order-3">
+                                    <div class="d-flex align-items-center h-100">
+                                        <span>
+                                            <i class="far fa-times text-muted"></i>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div>
+                                <div class="row">
+                                    <div id="dropdown_content_cart">
+                                        <div class="col-12">
+                                            <div id="card_font_values"
+                                                class="d-flex justify-content-between align-items-center">
+                                                <div><span class="fw-bold fs-6">Celková
+                                                        suma </span> <span>vrátane
+                                                        DPH</span></div>
+                                                <span class="fw-bold fs-4 pe-3">179,00 €</span>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div>
+                                <div class="row">
+                                    <div id="dropdown_content_cart_button">
+                                        <div class="col-12">
+                                            <div class="">
+                                                <!-- <span id="card_font_values" class="fs-5">Prejsť do
+                                                    košíka</span> <i class="fal fa-chevron-right ms-2"
+                                                    style="font-size: 9px;"></i> -->
+                                                <a class="btn btn-green w-100 text-white" href="cart_list.html">Prejsť
+                                                    do košíka <i class="fal fa-chevron-right ms-2"></i></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Searcg_bar on Monile Screen -->
+            <section class="search_nav d-lg-none custom-bg-light pb-0 pt-2">
+                <div class="container">
+                    <div class="row">
+                        <div class="collapse" id="collapse_search">
+                            <div class="col-lg-6 ">
+                                <div class="">
+                                    <div class="input-group">
+                                        <div class="dropdown">
+                                            <button class="btn nav-search-dropdwn-btn dropdown-toggle" type="button"
+                                                data-bs-toggle="dropdown" aria-expanded="false">
+                                                Všetky kategórie
+                                            </button>
+                                            <ul class="dropdown-menu">
+                                                <li><a class="dropdown-item" href="#">Action</a></li>
+                                                <li><a class="dropdown-item" href="#">Another action</a></li>
+                                                <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                            </ul>
+                                        </div>
+                                        <input type="text" class="form-control nav-search" placeholder="Váš e-mail">
+                                        <span class="input-group-text">
+                                            <button data-bs-toggle="collapse" data-bs-target="#collapse_search_dropdown"
+                                                aria-expanded="false" aria-controls="collapse_search_dropdown"
+                                                type="button" class="btn border-0 nav-search-btn text-white h-100"><i
+                                                    class="far fa-search"></i></button>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- Search Dropdown -->
+            <div class="collapse" id="collapse_search_dropdown">
+                <div class="card rounded-0 bg-transparent">
+                    <div class="container">
+                        <div class="search_rows row px-lg-3">
+                            <div class="col-lg-2 col-md-2 col-3">
+                                <div class="d-flex align-items-center h-100">
+                                    <div class="">
+                                        <img class="w-100" src="assets/images/products/search_preducts/1.png" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-7 col-md-7 col-9">
+                                <div class="d-flex align-items-center h-100">
+                                    <div class="">
+                                        <a href="category_page.html" class="text-muted small mb-0">
+                                            <span class="text-dark">iPhone</span>
+                                             13 Pro 128GB grafitovo sivá
+                                        </a>
+                                        <p class="bold mb-0 d-lg-none d-md-none">
+                                            839,90 €
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-3 col-12 d-none d-lg-block d-md-block">
+                                <div class="d-flex align-items-center justify-content-end h-100">
+                                    <div class="">
+                                        <p class="bold mb-0">
+                                            839,90 €
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="search_rows row px-lg-3">
+                            <div class="col-lg-2 col-md-2 col-3">
+                                <div class="d-flex align-items-center h-100">
+                                    <div class="">
+                                        <img class="w-100" src="assets/images/products/search_preducts/1.png" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-7 col-md-7 col-9">
+                                <div class="d-flex align-items-center h-100">
+                                    <div class="">
+                                        <a href="category_page.html" class="text-muted small mb-0">
+                                            <span class="text-dark">iPhone</span>
+                                             13 Pro 128GB grafitovo sivá
+                                        </a>
+                                        <p class="bold mb-0 d-lg-none d-md-none">
+                                            839,90 €
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-3 col-12 d-none d-lg-block d-md-block">
+                                <div class="d-flex align-items-center justify-content-end h-100">
+                                    <div class="">
+                                        <p class="bold mb-0">
+                                            839,90 €
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="search_rows row px-lg-3">
+                            <div class="col-lg-2 col-md-2 col-3">
+                                <div class="d-flex align-items-center h-100">
+                                    <div class="">
+                                        <img class="w-100" src="assets/images/products/search_preducts/1.png" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-7 col-md-7 col-9">
+                                <div class="d-flex align-items-center h-100">
+                                    <div class="">
+                                        <a href="category_page.html" class="text-muted small mb-0">
+                                            <span class="text-dark">iPhone</span>
+                                             13 Pro 128GB grafitovo sivá
+                                        </a>
+                                        <p class="bold mb-0 d-lg-none d-md-none">
+                                            839,90 €
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-3 col-12 d-none d-lg-block d-md-block">
+                                <div class="d-flex align-items-center justify-content-end h-100">
+                                    <div class="">
+                                        <p class="bold mb-0">
+                                            839,90 €
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mt-3">
+                        <a href="#" class="btn btn-pink w-100 rounded-0">Zobraziť všetky výsledky <i
+                                class="far fa-angle-right ms-2"></i> </a>
+                    </div>
+                </div>
+
+            </div>
+        </header>
+
+        <section class="custom-bg-light pt-5">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-3 col-md-12 col-sm-12">
+                        <div class="">
+                            <div class="mb-4">
+                                <a class="btn side_bar_collaspe_btn w-100 d-lg-none text-start"
+                                    data-bs-toggle="collapse" href="#sidebarfilters" role="button" aria-expanded="true"
+                                    aria-controls="sidebarfilters">
+                                    <i class="far fa-bars text-muted me-3"></i>Upresniť parametre
+                                </a>
+                            </div>
+                            <div class="collapse show" id="sidebarfilters">
+                                <div class="custom-bg-light side_bar_filter_div">
+                                    <p class="bold mt-0">Condition</p>
+                                    <div class="bg-white pt-3">
+                                        <ul>
+                                            <li>
+                                                <a href="">New</a>
+                                            </li>
+                                            <li>
+                                                <a href="">Renewed</a>
+                                            </li>
+                                            <li>
+                                                <a href="">Top produkt</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <p class="bold">Department</p>
+                                    <div class="bg-white pt-3">
+                                        <ul>
+                                            <li>
+                                                <a href="">Cell Phones</a>
+                                            </li>
+                                            <li>
+                                                <a href="">Cell Phones Cases & Covers</a>
+                                            </li>
+                                            <li>
+                                                <a href="">Cell Phone Basic Cases</a>
+                                            </li>
+                                            <li>
+                                                <a href="">See All 4 Departments</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <p class="bold">Customer Reviews</p>
+                                    <div class="bg-white pt-3">
+                                        <ul>
+                                            <li>
+                                                <a href="">Cell Phones</a>
+                                            </li>
+                                            <li>
+                                                <a href="">Cell Phones Cases & Covers</a>
+                                            </li>
+                                            <li>
+                                                <a href="">Cell Phone Basic Cases</a>
+                                            </li>
+                                            <li>
+                                                <a href="">See All 4 Departments</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <p class="bold">Brand</p>
+                                    <div class="bg-white pt-3">
+                                        <ul>
+                                            <li>
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" value="" id="apple">
+                                                    <label class="form-check-label" for="apple">
+                                                        Apple
+                                                    </label>
+                                                </div>
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" value=""
+                                                        id="samsung">
+                                                    <label class="form-check-label" for="samsung">
+                                                        Samsung Electronics
+                                                    </label>
+                                                </div>
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" value=""
+                                                        id="xiaomi">
+                                                    <label class="form-check-label" for="xiaomi">
+                                                        Xiaomi
+                                                    </label>
+                                                </div>
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" value="" id="nokia">
+                                                    <label class="form-check-label" for="nokia">
+                                                        Nokia
+                                                    </label>
+                                                </div>
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" value="" id="blu">
+                                                    <label class="form-check-label" for="blu">
+                                                        BLU
+                                                    </label>
+                                                </div>
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" value="" id="doge">
+                                                    <label class="form-check-label" for="doge">
+                                                        DOOGEE
+                                                    </label>
+                                                </div>
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" value=""
+                                                        id="motorola">
+                                                    <label class="form-check-label" for="motorola">
+                                                        Motorola
+                                                    </label>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <p class="bold">Cell Phone Carrier</p>
+                                    <div class="bg-white pt-3">
+                                        <ul>
+                                            <li>
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" value=""
+                                                        id="Blue-wireless">
+                                                    <label class="form-check-label" for="Blue-wireless">
+                                                        Blue Wireless
+                                                    </label>
+                                                </div>
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" value=""
+                                                        id="Simple-mobile">
+                                                    <label class="form-check-label" for="Simple-mobile">
+                                                        Simple Mobile
+                                                    </label>
+                                                </div>
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" value=""
+                                                        id="T-Mobile">
+                                                    <label class="form-check-label" for="T-Mobile">
+                                                        T-Mobile
+                                                    </label>
+                                                </div>
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" value=""
+                                                        id="TracFone">
+                                                    <label class="form-check-label" for="TracFone">
+                                                        TracFone Wireless
+                                                    </label>
+                                                </div>
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" value=""
+                                                        id="Unlocked">
+                                                    <label class="form-check-label" for="Unlocked">
+                                                        Unlocked
+                                                    </label>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <p class="bold">Cell Phone Internal Storage Memory</p>
+                                    <div class="bg-white pt-3">
+                                        <ul>
+                                            <li>
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" value="" id="39gb">
+                                                    <label class="form-check-label" for="39gb">
+                                                        Up to 3.9 GB
+                                                    </label>
+                                                </div>
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" value="" id="4GB">
+                                                    <label class="form-check-label" for="4GB">
+                                                        4 GB
+                                                    </label>
+                                                </div>
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" value="" id="8GB">
+                                                    <label class="form-check-label" for="8GB">
+                                                        8 GB
+                                                    </label>
+                                                </div>
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" value="" id="16GB">
+                                                    <label class="form-check-label" for="16GB">
+                                                        16 GB
+                                                    </label>
+                                                </div>
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" value="" id="32GB">
+                                                    <label class="form-check-label" for="32GB">
+                                                        32 GB
+                                                    </label>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <p class="bold">Cell Phone Operating System</p>
+                                    <div class="bg-white pt-3">
+                                        <ul>
+                                            <li>
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" value=""
+                                                        id="Android">
+                                                    <label class="form-check-label" for="Android">
+                                                        Android
+                                                    </label>
+                                                </div>
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" value="" id="iOS">
+                                                    <label class="form-check-label" for="iOS">
+                                                        iOS
+                                                    </label>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <p class="bold">Cellular Technology</p>
+                                    <div class="bg-white pt-3">
+                                        <ul>
+                                            <li>
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" value="" id="cel-1">
+                                                    <label class="form-check-label" for="cel-1">
+                                                        Up to 3.9 in
+                                                    </label>
+                                                </div>
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" value="" id="cel-2">
+                                                    <label class="form-check-label" for="cel-2">
+                                                        5 to 5.4 in
+                                                    </label>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <p class="bold">Phone color</p>
+                                    <div class="bg-white pt-3">
+                                        <ul>
+                                            <li id="phone_color" class="d-flex">
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" value=""
+                                                        id="color_1">
+                                                </div>
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" value=""
+                                                        id="color_2">
+                                                </div>
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" value=""
+                                                        id="color_3">
+                                                </div>
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" value=""
+                                                        id="color_4">
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-9 col-md-12 col-sm-12">
+                        <div class="row mt-4" id="product_list_row">
+                            <div class="col-lg-4 col-md-12 col-sm-12">
+                                <div class="product-box d-flex d-lg-block bg-white mt-3 mt-lg-0">
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <div class="text-center pt-lg-5 mt-lg-4 mb-lg-5 me-3 me-lg-0">
+                                            <img class="img-fluid mb-5 mb-lg-0" src="assets/images/products/phone_1.png"
+                                                alt="">
+                                            <p class="bold d-lg-none mb-0 text-danger">$ 999.00</p>
+                                        </div>
+                                    </div>
+                                    <div class="d-lg-flex align-items-center h-100">
+                                        <div class="">
+                                            <div class="d-flex">
+                                                <i class="fas fa-star star-color"></i>
+                                                <i class="fas fa-star star-color"></i>
+                                                <i class="fas fa-star star-color"></i>
+                                                <i class="fas fa-star star-color"></i>
+                                                <i class="fas fa-star star-color"></i>
+                                                <p class="small text-muted ms-2 mb-2">(5.0)</p>
+                                            </div>
+                                            <p class="product-box-heading">HP Spectre x360 2-in-1 15.6" 4K Ultra HD
+                                                Touch ...</p>
+                                            <div class="d-lg-none">
+                                                <a href="" class="btn btn-green me-2 mb-3">Na sklade</a>
+                                                <a href="" class="btn btn-outline-success mb-3">Doručenie do 2-4 dní</a>
+                                            </div>
+                                            <p class="product-box-sm-para d-lg-none">Herný notebook – AMD Ryzen 5 5600H,
+                                                15.6" IPS antireflexný 1920 × 1080</p>
+                                            <p class="bold d-none d-lg-block">$ 999.00</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-12 col-sm-12">
+                                <div class="product-box d-flex d-lg-block bg-white">
+                                    <span class="badge bg-orange rounded-1 d-none d-lg-inline-block">TOP produkt</span>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <div class="text-center pt-lg-5 mb-lg-5 me-3 me-lg-0">
+                                            <img class="img-fluid mb-5 mb-lg-0" src="assets/images/products/phone_2.png"
+                                                alt="">
+                                            <p class="bold d-lg-none mb-0 text-danger">$ 999.00</p>
+                                        </div>
+                                    </div>
+                                    <div class="d-lg-flex align-items-center h-100">
+                                        <div class="">
+                                            <span class="badge bg-orange rounded-1 mb-3 d-lg-none">TOP produkt</span>
+                                            <div class="d-flex">
+                                                <i class="fas fa-star star-color"></i>
+                                                <i class="fas fa-star star-color"></i>
+                                                <i class="fas fa-star star-color"></i>
+                                                <i class="fas fa-star star-color"></i>
+                                                <i class="fas fa-star star-color"></i>
+                                                <p class="small text-muted ms-2 mb-2">(5.0)</p>
+                                            </div>
+                                            <p class="product-box-heading">HP Spectre x360 2-in-1 15.6" 4K Ultra HD
+                                                Touch ...</p>
+                                            <div class="d-lg-none">
+                                                <a href="" class="btn btn-green me-2 mb-3">Na sklade</a>
+                                                <a href="" class="btn btn-outline-success mb-3">Doručenie do 2-4 dní</a>
+                                            </div>
+                                            <p class="product-box-sm-para d-lg-none">Herný notebook – AMD Ryzen 5 5600H,
+                                                15.6" IPS antireflexný 1920 × 1080</p>
+                                            <p class="bold d-none d-lg-block">$ 999.00</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-12 col-sm-12">
+                                <div class="product-box d-flex d-lg-block bg-white">
+                                    <span class="badge bg-orange rounded-1 d-none d-lg-inline-block">TOP produkt</span>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <div class="text-center pt-lg-5 mb-lg-5 me-3 me-lg-0">
+                                            <img class="img-fluid mb-5 mb-lg-0" src="assets/images/products/phone_3.png"
+                                                alt="">
+                                            <p class="bold d-lg-none mb-0 text-danger">$ 999.00</p>
+                                        </div>
+                                    </div>
+                                    <div class="d-lg-flex align-items-center h-100">
+                                        <div class="">
+                                            <span class="badge bg-orange rounded-1 mb-3 d-lg-none">TOP produkt</span>
+                                            <div class="d-flex">
+                                                <i class="fas fa-star star-color"></i>
+                                                <i class="fas fa-star star-color"></i>
+                                                <i class="fas fa-star star-color"></i>
+                                                <i class="fas fa-star star-color"></i>
+                                                <i class="fas fa-star star-color"></i>
+                                                <p class="small text-muted ms-2 mb-2">(5.0)</p>
+                                            </div>
+                                            <p class="product-box-heading">HP Spectre x360 2-in-1 15.6" 4K Ultra HD
+                                                Touch ...</p>
+                                            <div class="d-lg-none">
+                                                <a href="" class="btn btn-green me-2 mb-3">Na sklade</a>
+                                                <a href="" class="btn btn-outline-success mb-3">Doručenie do 2-4 dní</a>
+                                            </div>
+                                            <p class="product-box-sm-para d-lg-none">Herný notebook – AMD Ryzen 5 5600H,
+                                                15.6" IPS antireflexný 1920 × 1080</p>
+                                            <p class="bold d-none d-lg-block">$ 999.00</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-12 col-sm-12">
+                                <div class="product-box d-flex d-lg-block bg-white">
+                                    <span class="badge bg-orange rounded-1 d-none d-lg-inline-block">TOP produkt</span>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <div class="text-center pt-lg-5 mb-lg-5 me-3 me-lg-0">
+                                            <img class="img-fluid mb-5 mb-lg-0" src="assets/images/products/phone_4.png"
+                                                alt="">
+                                            <p class="bold d-lg-none mb-0 text-danger">$ 999.00</p>
+                                        </div>
+                                    </div>
+                                    <div class="d-lg-flex align-items-center h-100">
+                                        <div class="">
+                                            <span class="badge bg-orange rounded-1 mb-3 d-lg-none">TOP produkt</span>
+                                            <div class="d-flex">
+                                                <i class="fas fa-star star-color"></i>
+                                                <i class="fas fa-star star-color"></i>
+                                                <i class="fas fa-star star-color"></i>
+                                                <i class="fas fa-star star-color"></i>
+                                                <i class="fas fa-star star-color"></i>
+                                                <p class="small text-muted ms-2 mb-2">(5.0)</p>
+                                            </div>
+                                            <p class="product-box-heading">HP Spectre x360 2-in-1 15.6" 4K Ultra HD
+                                                Touch ...</p>
+                                            <div class="d-lg-none">
+                                                <a href="" class="btn btn-green me-2 mb-3">Na sklade</a>
+                                                <a href="" class="btn btn-outline-success mb-3">Doručenie do 2-4 dní</a>
+                                            </div>
+                                            <p class="product-box-sm-para d-lg-none">Herný notebook – AMD Ryzen 5 5600H,
+                                                15.6" IPS antireflexný 1920 × 1080</p>
+                                            <p class="bold d-none d-lg-block">$ 999.00</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-12 col-sm-12">
+                                <div class="product-box d-flex d-lg-block bg-white">
+                                    <span class="badge bg-orange rounded-1 d-none d-lg-inline-block">TOP produkt</span>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <div class="text-center pt-lg-5 mb-lg-5 me-3 me-lg-0">
+                                            <img class="img-fluid mb-5 mb-lg-0" src="assets/images/products/phone_5.png"
+                                                alt="">
+                                            <p class="bold d-lg-none mb-0 text-danger">$ 999.00</p>
+                                        </div>
+                                    </div>
+                                    <div class="d-lg-flex align-items-center h-100">
+                                        <div class="">
+                                            <span class="badge bg-orange rounded-1 mb-3 d-lg-none">TOP produkt</span>
+                                            <div class="d-flex">
+                                                <i class="fas fa-star star-color"></i>
+                                                <i class="fas fa-star star-color"></i>
+                                                <i class="fas fa-star star-color"></i>
+                                                <i class="fas fa-star star-color"></i>
+                                                <i class="fas fa-star star-color"></i>
+                                                <p class="small text-muted ms-2 mb-2">(5.0)</p>
+                                            </div>
+                                            <p class="product-box-heading">HP Spectre x360 2-in-1 15.6" 4K Ultra HD
+                                                Touch ...</p>
+                                            <div class="d-lg-none">
+                                                <a href="" class="btn btn-green me-2 mb-3">Na sklade</a>
+                                                <a href="" class="btn btn-outline-success mb-3">Doručenie do 2-4 dní</a>
+                                            </div>
+                                            <p class="product-box-sm-para d-lg-none">Herný notebook – AMD Ryzen 5 5600H,
+                                                15.6" IPS antireflexný 1920 × 1080</p>
+                                            <p class="bold d-none d-lg-block">$ 999.00</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-12 col-sm-12">
+                                <div class="product-box d-flex d-lg-block bg-white">
+                                    <span class="badge bg-orange rounded-1 d-none d-lg-inline-block">TOP produkt</span>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <div class="text-center pt-lg-5 mb-lg-5 me-3 me-lg-0">
+                                            <img class="img-fluid mb-5 mb-lg-0" src="assets/images/products/phone_6.png"
+                                                alt="">
+                                            <p class="bold d-lg-none mb-0 text-danger">$ 999.00</p>
+                                        </div>
+                                    </div>
+                                    <div class="d-lg-flex align-items-center h-100">
+                                        <div class="">
+                                            <span class="badge bg-orange rounded-1 mb-3 d-lg-none">TOP produkt</span>
+                                            <div class="d-flex">
+                                                <i class="fas fa-star star-color"></i>
+                                                <i class="fas fa-star star-color"></i>
+                                                <i class="fas fa-star star-color"></i>
+                                                <i class="fas fa-star star-color"></i>
+                                                <i class="fas fa-star star-color"></i>
+                                                <p class="small text-muted ms-2 mb-2">(5.0)</p>
+                                            </div>
+                                            <p class="product-box-heading">HP Spectre x360 2-in-1 15.6" 4K Ultra HD
+                                                Touch ...</p>
+                                            <div class="d-lg-none">
+                                                <a href="" class="btn btn-green me-2 mb-3">Na sklade</a>
+                                                <a href="" class="btn btn-outline-success mb-3">Doručenie do 2-4 dní</a>
+                                            </div>
+                                            <p class="product-box-sm-para d-lg-none">Herný notebook – AMD Ryzen 5 5600H,
+                                                15.6" IPS antireflexný 1920 × 1080</p>
+                                            <p class="bold d-none d-lg-block">$ 999.00</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-12 col-sm-12">
+                                <div class="product-box d-flex d-lg-block bg-white mt-3 mt-lg-0">
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <div class="text-center pt-lg-5 mt-lg-4 mb-lg-5 me-3 me-lg-0">
+                                            <img class="img-fluid mb-5 mb-lg-0" src="assets/images/products/phone_1.png"
+                                                alt="">
+                                            <p class="bold d-lg-none mb-0 text-danger">$ 999.00</p>
+                                        </div>
+                                    </div>
+                                    <div class="d-lg-flex align-items-center h-100">
+                                        <div class="">
+                                            <div class="d-flex">
+                                                <i class="fas fa-star star-color"></i>
+                                                <i class="fas fa-star star-color"></i>
+                                                <i class="fas fa-star star-color"></i>
+                                                <i class="fas fa-star star-color"></i>
+                                                <i class="fas fa-star star-color"></i>
+                                                <p class="small text-muted ms-2 mb-2">(5.0)</p>
+                                            </div>
+                                            <p class="product-box-heading">HP Spectre x360 2-in-1 15.6" 4K Ultra HD
+                                                Touch ...</p>
+                                            <div class="d-lg-none">
+                                                <a href="" class="btn btn-green me-2 mb-3">Na sklade</a>
+                                                <a href="" class="btn btn-outline-success mb-3">Doručenie do 2-4 dní</a>
+                                            </div>
+                                            <p class="product-box-sm-para d-lg-none">Herný notebook – AMD Ryzen 5 5600H,
+                                                15.6" IPS antireflexný 1920 × 1080</p>
+                                            <p class="bold d-none d-lg-block">$ 999.00</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-12 col-sm-12">
+                                <div class="product-box d-flex d-lg-block bg-white">
+                                    <span class="badge bg-orange rounded-1 d-none d-lg-inline-block">TOP produkt</span>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <div class="text-center pt-lg-5 mb-lg-5 me-3 me-lg-0">
+                                            <img class="img-fluid mb-5 mb-lg-0" src="assets/images/products/phone_2.png"
+                                                alt="">
+                                            <p class="bold d-lg-none mb-0 text-danger">$ 999.00</p>
+                                        </div>
+                                    </div>
+                                    <div class="d-lg-flex align-items-center h-100">
+                                        <div class="">
+                                            <span class="badge bg-orange rounded-1 mb-3 d-lg-none">TOP produkt</span>
+                                            <div class="d-flex">
+                                                <i class="fas fa-star star-color"></i>
+                                                <i class="fas fa-star star-color"></i>
+                                                <i class="fas fa-star star-color"></i>
+                                                <i class="fas fa-star star-color"></i>
+                                                <i class="fas fa-star star-color"></i>
+                                                <p class="small text-muted ms-2 mb-2">(5.0)</p>
+                                            </div>
+                                            <p class="product-box-heading">HP Spectre x360 2-in-1 15.6" 4K Ultra HD
+                                                Touch ...</p>
+                                            <div class="d-lg-none">
+                                                <a href="" class="btn btn-green me-2 mb-3">Na sklade</a>
+                                                <a href="" class="btn btn-outline-success mb-3">Doručenie do 2-4 dní</a>
+                                            </div>
+                                            <p class="product-box-sm-para d-lg-none">Herný notebook – AMD Ryzen 5 5600H,
+                                                15.6" IPS antireflexný 1920 × 1080</p>
+                                            <p class="bold d-none d-lg-block">$ 999.00</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-12 col-sm-12">
+                                <div class="product-box d-flex d-lg-block bg-white">
+                                    <span class="badge bg-orange rounded-1 d-none d-lg-inline-block">TOP produkt</span>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <div class="text-center pt-lg-5 mb-lg-5 me-3 me-lg-0">
+                                            <img class="img-fluid mb-5 mb-lg-0" src="assets/images/products/phone_3.png"
+                                                alt="">
+                                            <p class="bold d-lg-none mb-0 text-danger">$ 999.00</p>
+                                        </div>
+                                    </div>
+                                    <div class="d-lg-flex align-items-center h-100">
+                                        <div class="">
+                                            <span class="badge bg-orange rounded-1 mb-3 d-lg-none">TOP produkt</span>
+                                            <div class="d-flex">
+                                                <i class="fas fa-star star-color"></i>
+                                                <i class="fas fa-star star-color"></i>
+                                                <i class="fas fa-star star-color"></i>
+                                                <i class="fas fa-star star-color"></i>
+                                                <i class="fas fa-star star-color"></i>
+                                                <p class="small text-muted ms-2 mb-2">(5.0)</p>
+                                            </div>
+                                            <p class="product-box-heading">HP Spectre x360 2-in-1 15.6" 4K Ultra HD
+                                                Touch ...</p>
+                                            <div class="d-lg-none">
+                                                <a href="" class="btn btn-green me-2 mb-3">Na sklade</a>
+                                                <a href="" class="btn btn-outline-success mb-3">Doručenie do 2-4 dní</a>
+                                            </div>
+                                            <p class="product-box-sm-para d-lg-none">Herný notebook – AMD Ryzen 5 5600H,
+                                                15.6" IPS antireflexný 1920 × 1080</p>
+                                            <p class="bold d-none d-lg-block">$ 999.00</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-12 col-sm-12">
+                                <div class="product-box d-flex d-lg-block bg-white">
+                                    <span class="badge bg-orange rounded-1 d-none d-lg-inline-block">TOP produkt</span>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <div class="text-center pt-lg-5 mb-lg-5 me-3 me-lg-0">
+                                            <img class="img-fluid mb-5 mb-lg-0" src="assets/images/products/phone_4.png"
+                                                alt="">
+                                            <p class="bold d-lg-none mb-0 text-danger">$ 999.00</p>
+                                        </div>
+                                    </div>
+                                    <div class="d-lg-flex align-items-center h-100">
+                                        <div class="">
+                                            <span class="badge bg-orange rounded-1 mb-3 d-lg-none">TOP produkt</span>
+                                            <div class="d-flex">
+                                                <i class="fas fa-star star-color"></i>
+                                                <i class="fas fa-star star-color"></i>
+                                                <i class="fas fa-star star-color"></i>
+                                                <i class="fas fa-star star-color"></i>
+                                                <i class="fas fa-star star-color"></i>
+                                                <p class="small text-muted ms-2 mb-2">(5.0)</p>
+                                            </div>
+                                            <p class="product-box-heading">HP Spectre x360 2-in-1 15.6" 4K Ultra HD
+                                                Touch ...</p>
+                                            <div class="d-lg-none">
+                                                <a href="" class="btn btn-green me-2 mb-3">Na sklade</a>
+                                                <a href="" class="btn btn-outline-success mb-3">Doručenie do 2-4 dní</a>
+                                            </div>
+                                            <p class="product-box-sm-para d-lg-none">Herný notebook – AMD Ryzen 5 5600H,
+                                                15.6" IPS antireflexný 1920 × 1080</p>
+                                            <p class="bold d-none d-lg-block">$ 999.00</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-12 col-sm-12">
+                                <div class="product-box d-flex d-lg-block bg-white">
+                                    <span class="badge bg-orange rounded-1 d-none d-lg-inline-block">TOP produkt</span>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <div class="text-center pt-lg-5 mb-lg-5 me-3 me-lg-0">
+                                            <img class="img-fluid mb-5 mb-lg-0" src="assets/images/products/phone_5.png"
+                                                alt="">
+                                            <p class="bold d-lg-none mb-0 text-danger">$ 999.00</p>
+                                        </div>
+                                    </div>
+                                    <div class="d-lg-flex align-items-center h-100">
+                                        <div class="">
+                                            <span class="badge bg-orange rounded-1 mb-3 d-lg-none">TOP produkt</span>
+                                            <div class="d-flex">
+                                                <i class="fas fa-star star-color"></i>
+                                                <i class="fas fa-star star-color"></i>
+                                                <i class="fas fa-star star-color"></i>
+                                                <i class="fas fa-star star-color"></i>
+                                                <i class="fas fa-star star-color"></i>
+                                                <p class="small text-muted ms-2 mb-2">(5.0)</p>
+                                            </div>
+                                            <p class="product-box-heading">HP Spectre x360 2-in-1 15.6" 4K Ultra HD
+                                                Touch ...</p>
+                                            <div class="d-lg-none">
+                                                <a href="" class="btn btn-green me-2 mb-3">Na sklade</a>
+                                                <a href="" class="btn btn-outline-success mb-3">Doručenie do 2-4 dní</a>
+                                            </div>
+                                            <p class="product-box-sm-para d-lg-none">Herný notebook – AMD Ryzen 5 5600H,
+                                                15.6" IPS antireflexný 1920 × 1080</p>
+                                            <p class="bold d-none d-lg-block">$ 999.00</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-12 col-sm-12">
+                                <div class="product-box d-flex d-lg-block bg-white">
+                                    <span class="badge bg-orange rounded-1 d-none d-lg-inline-block">TOP produkt</span>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <div class="text-center pt-lg-5 mb-lg-5 me-3 me-lg-0">
+                                            <img class="img-fluid mb-5 mb-lg-0" src="assets/images/products/phone_6.png"
+                                                alt="">
+                                            <p class="bold d-lg-none mb-0 text-danger">$ 999.00</p>
+                                        </div>
+                                    </div>
+                                    <div class="d-lg-flex align-items-center h-100">
+                                        <div class="">
+                                            <span class="badge bg-orange rounded-1 mb-3 d-lg-none">TOP produkt</span>
+                                            <div class="d-flex">
+                                                <i class="fas fa-star star-color"></i>
+                                                <i class="fas fa-star star-color"></i>
+                                                <i class="fas fa-star star-color"></i>
+                                                <i class="fas fa-star star-color"></i>
+                                                <i class="fas fa-star star-color"></i>
+                                                <p class="small text-muted ms-2 mb-2">(5.0)</p>
+                                            </div>
+                                            <p class="product-box-heading">HP Spectre x360 2-in-1 15.6" 4K Ultra HD
+                                                Touch ...</p>
+                                            <div class="d-lg-none">
+                                                <a href="" class="btn btn-green me-2 mb-3">Na sklade</a>
+                                                <a href="" class="btn btn-outline-success mb-3">Doručenie do 2-4 dní</a>
+                                            </div>
+                                            <p class="product-box-sm-para d-lg-none">Herný notebook – AMD Ryzen 5 5600H,
+                                                15.6" IPS antireflexný 1920 × 1080</p>
+                                            <p class="bold d-none d-lg-block">$ 999.00</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <div class="">
+                            <div
+                                class="d-flex justify-content-center justify-content-lg-between pagination_border py-3 mt-5">
+                                <div class="pagination_prev">
+                                    <a href=""><i
+                                            class="fal fa-arrow-left me-2 d-none d-lg-inline-block"></i>Predchádzajúce</a>
+                                </div>
+                                <div class="pagination_numbers d-none d-lg-block">
+                                    <a href="">
+                                        1
+                                    </a>
+                                    <a class="active" href="">
+                                        2
+                                    </a>
+                                    <a href="">
+                                        3
+                                    </a>
+                                    <span>
+                                        ...
+                                    </span>
+                                    <a href="">
+                                        8
+                                    </a>
+                                    <a href="">
+                                        9
+                                    </a>
+                                    <a href="">
+                                        10
+                                    </a>
+                                </div>
+                                <div class="pagination_next">
+                                    <a href="">Ďalšie<i
+                                            class="fal fa-arrow-right ms-2 d-none d-lg-inline-block"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Client Slider -->
+        <section class="client_slider_section d-none d-lg-block">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="border-top border-bottom py-5">
+                            <div class="owl-carousel owl-theme" id="client_slider">
+                                <div class="item">
+                                    <a href="" class="w-100">
+                                        <img class="clinet_img" src="assets/images/clients/1.png" alt="">
+                                    </a>
+                                </div>
+                                <div class="item">
+                                    <a href="" class="w-100">
+                                        <img class="clinet_img" src="assets/images/clients/2.png" alt="">
+                                    </a>
+                                </div>
+                                <div class="item">
+                                    <a href="" class="w-100">
+                                        <img class="clinet_img" src="assets/images/clients/3.png" alt="">
+                                    </a>
+                                </div>
+                                <div class="item">
+                                    <a href="" class="w-100">
+                                        <img class="clinet_img" src="assets/images/clients/4.png" alt="">
+                                    </a>
+                                </div>
+                                <div class="item">
+                                    <a href="" class="w-100">
+                                        <img class="clinet_img" src="assets/images/clients/5.png" alt="">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer id="main_footer">
+            <section id="footer_top_section" class="p-0 bg-white text-dark">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-3 col-6">
+                            <div class="footer_top_block">
+                                <div class="me-2">
+                                    <img src="assets/images/footer/shopping_bag.png" alt="Shopping Bag">
+                                </div>
+                                <div class="footer_top_block_text">
+                                    <p>Predávajte svoj tovar u nás</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-6">
+                            <div class="footer_top_block">
+                                <div class="me-2">
+                                    <img src="assets/images/footer/support.png" alt="Support">
+                                </div>
+                                <div class="footer_top_block_text">
+                                    <p>Support a return</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-6">
+                            <div class="footer_top_block">
+                                <div class="me-2">
+                                    <img src="assets/images/footer/products.png" alt="Products">
+                                </div>
+                                <div class="footer_top_block_text">
+                                    <p>Viac ako 1000 produktov</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-6">
+                            <div class="footer_top_block border-0">
+                                <div class="me-2">
+                                    <img src="assets/images/footer/security.png" alt="Security">
+                                </div>
+                                <div class="footer_top_block_text">
+                                    <p>100% Secure payment</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="newsletter_section">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-6 col-md-12 col-sm-12">
+                            <div class="section_heading_h2">
+                                <h2>Subscribe <br /> to Our Newsletter</h2>
+                                <p>Subscribe to our newsletter & get <br /> notification about discounts.</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-md-12 col-sm-12">
+                            <div class="d-flex align-items-center h-100">
+                                <div class="input-group">
+                                    <input type="text" class="form-control" placeholder="Váš e-mail">
+                                    <span class="input-group-text">
+                                        <button type="button" class="btn border-0 text-white">Subscribe</button>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="main_footer_section">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-4 col-md-12 col-sm-12">
+                            <div class="">
+                                <a href="">
+                                    <img src="assets/images/logo.png" alt="Logo">
+                                </a>
+                                <div class="">
+                                    <ul class="d-flex">
+                                        <li class="footer_social_icons fb">
+                                            <a href="">
+                                                <i class="fab fa-facebook-f text-white"></i>
+                                            </a>
+                                        </li>
+                                        <li class="footer_social_icons go">
+                                            <a href="">
+                                                <i class="fab fa-google text-white"></i>
+                                            </a>
+                                        </li>
+                                        <li class="footer_social_icons in">
+                                            <a href="">
+                                                <i class="fab fa-linkedin-in text-white"></i>
+                                            </a>
+                                        </li>
+                                        <li class="footer_social_icons tw">
+                                            <a href="">
+                                                <i class="fab fa-twitter text-white"></i>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6 col-sm-12">
+                            <div class="">
+                                <h6 class="mb-3">Let Us Help You</h6>
+                                <ul>
+                                    <li>
+                                        <a href="" class="custom-dark-text">
+                                            Your Account
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="" class="custom-dark-text">
+                                            Your Orders
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="" class="custom-dark-text">
+                                            Return and damage policy
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="" class="custom-dark-text">
+                                            Shipping
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="textova.html" class="custom-dark-text">
+                                            Text Ova
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6 col-sm-12">
+                            <div class="">
+                                <h6 class="mb-3">Make Money</h6>
+                                <ul>
+                                    <li>
+                                        <a href="" class="custom-dark-text">
+                                            Sell on Cart
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="signin.html" class="custom-dark-text">
+                                            Login
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="register.html" class="custom-dark-text">
+                                            Register
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="blog.html" class="custom-dark-text">
+                                            Blogs
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="faq.html" class="custom-dark-text">
+                                            FAQ
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="footer_copyright" class="p-0 bg-white">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="text-dark text-center">
+                                <p class="copyright">
+                                    2022 Woowie, All rights reserved.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </footer>
+
+    </div>
+
+
+    <!-- Jquery File -->
+    <script src="assets/js/jquery.min.js"></script>
+    <!-- Bootstrap Js Flies -->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js"
+        integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V"
+        crossorigin="anonymous"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+        integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+        crossorigin="anonymous"></script>
+    <!-- Owl Carousel Js Files -->
+    <script src="assets/js/owl.carousel.min.js"></script>
+
+
+
+    <script>
+        function cartToogle() {
+            document.getElementById("myDropdown").classList.toggle("show");
+        }
+    </script>
+
+
+
+
+    <script>
+        function Switch_Menu() {
+            if ($(window).width() < 992) {
+                $('#sidebarfilters').removeClass('show');
+            } else {
+                $('#sidebarfilters').addClass('show');
+            }
+        }
+        $(window).resize(function () { Switch_Menu(); });
+    </script>
+    <script>
+        $('#client_slider').owlCarousel({
+            loop: true,
+            margin: 10,
+            nav: false,
+            dots: false,
+            responsive: {
+                0: {
+                    items: 1
+                },
+                600: {
+                    items: 3
+                },
+                1000: {
+                    items: 5
+                }
+            }
+        })
+
+    </script>
+</body>
+
+</html>

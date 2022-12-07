@@ -1,0 +1,214 @@
+@media only screen and (max-width: 992px) {
+    .category_box_content {
+        text-align: center !important;
+    }
+
+    .category_box_content p {
+        font-size: 13px;
+    }
+
+    .category_box_content a {
+        font-size: 10px;
+    }
+
+    .category_box img {
+        margin-bottom: 20px;
+    }
+
+    .product-box-heading {
+        font-size: 22px;
+        font-weight: bold;
+        color: var(--black);
+    }
+
+    .product-box {
+        border: none;
+        box-shadow: none;
+    }
+
+    #product_list_row {
+        background-color: var(--white);
+    }
+
+    #product_item_carousel .owl-nav .owl-prev {
+        margin-left: 0px;
+    }
+
+    #product_item_carousel .owl-nav .owl-next {
+        margin-right: 0px;
+    }
+
+
+    #product_item_carousel_on_drtail_page .owl-nav .owl-prev {
+        margin-left: 0px;
+    }
+
+    #product_item_carousel_on_drtail_page .owl-nav .owl-next {
+        margin-right: 0px;
+    }
+
+    .non_gradient_div{
+        display: none;
+    }
+    
+    #cart_item_list_section .btn-green-main{
+        width: 100%;
+    }
+
+    #main_banner .owl-dots {
+        display: block;
+        position: relative;
+        width: 100%;
+        bottom: 0;
+        left: 0;
+    }
+
+    .seller_user_box {
+        display: flex;
+        justify-content: center;
+    }
+
+    .seller_user_img {
+        width: 100px;
+        margin-right: 30px;
+    }
+
+    .seller_user_heading {
+        font-size: 15px;
+        font-weight: bold;
+        margin-bottom: 0px;
+    }
+
+    .seller_user_content {
+        font-size: 10px;
+        color: var(--text-light);
+    }
+
+    .pagination_prev a{
+        padding: 20px 20px;
+        background-color: var(--seconday-btn-color);
+        border-radius: 5px;
+        color: var(--black)!important;
+        margin-right: 20px;
+    }
+    .pagination_next a{
+        padding: 20px 20px;
+        background-color: var(--pink);
+        border-radius: 5px;
+        color: var(--white)!important;
+    }
+    .pagination_border{
+        border-top: none;
+    }
+    .set_boder_on_lg{
+        border-left: none;
+    }
+    #moj_profile_page_section .nav-pills{
+        display: flex;
+        flex-direction: initial!important;
+        margin: 0 auto;
+    }
+    #moj_profile_page_section .nav-pills .nav-link{
+        display: initial!important;
+        margin: 0 auto;
+    }
+    .moj_profile_side_btn .nav-link{
+        border-bottom: 3px solid transparent;
+        border-left: none;
+        width: 50%;
+    }
+    .moj_profile_side_btn .nav-link.active{
+        color: var(--black);
+        background-color: #F3F3F3;
+        border-left: none;
+        border-bottom: 3px solid var(--pink);
+    }
+    .moj_profile_side_btn .nav-link.active i{
+        color: var(--pink);
+    }
+    .moj_objednavky_set_btn_position{
+        position: absolute;
+        bottom: 0px;
+        right: 30px;
+    }
+
+
+
+    #dropdown_id .dropdown-content {
+        position: absolute;
+        right: 60px;
+        top: 56px;
+        width: 450px;;
+        overflow: hidden;
+        z-index: 100;
+    }
+
+}
+
+/* @media only screen and (min-width: 992px) {} */
+
+@media only screen and (max-width: 776px) {
+    .login_left_side_outer_div {
+        padding: 50px 20px;
+    }
+    .signin_outer_shell{
+        height: 100%;
+        overflow-y: auto;
+    }
+    #collapse_search_dropdown .card{
+        width: 90%;
+        position: absolute;
+        top: 130px;
+        left: 5%;
+    }
+}
+
+@media only screen and (max-width: 576px) {
+    .shop_for_real_banner_content p {
+        font-size: 15px;
+    }
+
+    .shop_for_real_banner_content h3 {
+        font-size: 30px;
+    }
+
+    .adj-padding-on-mobile{
+        padding: 20px 9px;
+    }
+    .main_banner_content{
+        margin-top: 60px;
+        margin-bottom: 60px;
+    }
+    .blog_detail_content{
+        padding: 20px;
+    }
+    .login_left_side_outer_div {
+        padding: 50px 20px;
+    }
+    .moj_profile_side_btn .nav-link{
+        font-size: 12px;
+        width: 50%;
+    }
+
+
+
+
+    #dropdown_id .dropdown-content {
+        position: absolute;
+        right: 0px;
+        top: 56px;
+        width: 100%;
+        overflow: hidden;
+        z-index: 100;
+    }
+    #card_font_values{
+        font-size: 11px;
+    }
+    #collapse_search_dropdown .card{
+        width: 100%;
+        position: absolute;
+        left: 0;
+        top: 125px;
+        z-index: 100;
+    }
+}
