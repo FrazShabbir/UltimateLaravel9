@@ -9,7 +9,7 @@
         integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
 
     <!-- FontAwesome 5 Pro CSS Files -->
-    <link rel="stylesheet" href="assets/css/all.css">
+    <link rel="stylesheet" href="{{asset('frontend/assets/css/all.css')}}">
 
     <!-- Owl Carousel CSS Files -->
     <link rel="stylesheet" href="{{asset('frontend/assets/css/owl.carousel.min.css')}}">

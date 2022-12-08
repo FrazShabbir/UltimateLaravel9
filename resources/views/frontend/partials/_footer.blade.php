@@ -7,7 +7,7 @@
                         <div class="col-lg-3 col-6">
                             <div class="footer_top_block">
                                 <div class="me-2">
-                                    <img src="assets/images/footer/shopping_bag.png" alt="Shopping Bag">
+                                    <img src="{{asset('frontend/assets/images/footer/shopping_bag.png')}}" alt="Shopping Bag">
                                 </div>
                                 <div class="footer_top_block_text">
                                     <p>Predávajte svoj tovar u nás</p>
@@ -17,7 +17,7 @@
                         <div class="col-lg-3 col-6">
                             <div class="footer_top_block">
                                 <div class="me-2">
-                                    <img src="assets/images/footer/support.png" alt="Support">
+                                    <img src="{{asset('frontend/assets/images/footer/support.png')}}" alt="Support">
                                 </div>
                                 <div class="footer_top_block_text">
                                     <p>Support a return</p>
@@ -27,7 +27,7 @@
                         <div class="col-lg-3 col-6">
                             <div class="footer_top_block">
                                 <div class="me-2">
-                                    <img src="assets/images/footer/products.png" alt="Products">
+                                    <img src="{{asset('frontend/assets/images/footer/products.png')}}" alt="Products">
                                 </div>
                                 <div class="footer_top_block_text">
                                     <p>Viac ako 1000 produktov</p>
@@ -37,7 +37,7 @@
                         <div class="col-lg-3 col-6">
                             <div class="footer_top_block border-0">
                                 <div class="me-2">
-                                    <img src="assets/images/footer/security.png" alt="Security">
+                                    <img src="{{asset('frontend/assets/images/footer/security.png')}}" alt="Security">
                                 </div>
                                 <div class="footer_top_block_text">
                                     <p>100% Secure payment</p>
@@ -75,7 +75,7 @@
                         <div class="col-lg-4 col-md-12 col-sm-12">
                             <div class="">
                                 <a href="">
-                                    <img src="assets/images/logo.png" alt="Logo">
+                                    <img src="{{asset('frontend/assets/images/logo.png')}}" alt="Logo">
                                 </a>
                                 <div class="">
                                     <ul class="d-flex">
