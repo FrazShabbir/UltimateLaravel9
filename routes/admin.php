@@ -4,7 +4,6 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Backend\UserController;
 use App\Http\Controllers\Backend\RoleController;
 use App\Http\Controllers\Backend\GeneralController;
-use App\Http\Controllers\Backend\DesignationController;
 use App\Http\Controllers\Backend\SlideController;
 
 /*
@@ -47,15 +46,7 @@ Route::group(['middleware' => ['auth'], 'prefix' => 'dashboard'],function () {
 
 
 
-    //Route::resource('designations', DesignationController::class);
-    Route::get('designations', [DesignationController::class, 'index'])->name('designations.index')->middleware(['can:Read Designations']);
-    Route::get('designation/create', [DesignationController::class, 'create'])->name('designations.create')->middleware(['can:Create Designations']);
-    Route::post('designation/create/save', [DesignationController::class, 'store'])->name('designations.store')->middleware(['can:Create Designations']);
-    Route::get('designation/{id}', [DesignationController::class, 'show'])->name('designations.show')->middleware(['can:Read Designations']);
-    Route::get('designation/{id}/edit', [DesignationController::class, 'edit'])->name('designations.edit')->middleware(['can:Update Designations']);
-    Route::put('designation/{id}/update', [DesignationController::class, 'update'])->name('designations.update')->middleware(['can:Update Designations']);
-    Route::delete('designation/{id}', [DesignationController::class, 'destroy'])->name('designations.destroy')->middleware(['can:Delete Designations']);
-
+  
     
     Route::get('reset-password/{user}', [UserController::class, 'reset_password'])->name('users.reset_password');
     Route::get('my-profile', [GeneralController::class, 'myProfile'])->name('site.myProfile');

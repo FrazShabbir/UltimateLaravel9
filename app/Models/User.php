@@ -28,7 +28,6 @@ class User extends Authenticatable
         'username',
         'status',
         'email',
-        'designation_id',
         'password',
     ];
 
@@ -51,8 +50,5 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
     ];
 
-    function designation()
-    {
-        return $this->belongsTo('App\Models\Designation');
-    }
+ 
 }

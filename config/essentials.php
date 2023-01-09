@@ -17,13 +17,7 @@ return [
             'Delete Roles',
             'Export Roles',
         ],
-        'Designations' => [
-            'Create Designations',
-            'Update Designations',
-            'Read Designations',
-            'Delete Designations',
-            'Export Designations',
-        ],
+   
 
      
         'Settings' => [

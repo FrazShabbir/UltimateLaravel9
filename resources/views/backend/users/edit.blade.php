@@ -48,18 +48,7 @@
                                             placeholder="e.g. abc@email.com" value="{{ $user->email }}">
                                     </div>
                                 </div>
-                                <div class="row">
-                                    <div class="col-lg-6 col-md-6 col-sm-12">
-                                        <div class="form-group">
-                                            <label class="required" for="designation">User Designation</label>
-                                            <select class="form-control" id="designation" name="designation_id">
-                                                @foreach ($designations as $designation)
-                                                    <option value="{{ $designation->id }}">{{ $designation->name }}</option>
-                                                @endforeach
-                                            </select>
-                                        </div>
-                                    </div>
-                                </div>
+                           
                                 <div class="mt-5">
                                     <div class="row">
                                         <div class="col-lg-2 col-md-2 col-sm-12">

@@ -13,7 +13,6 @@ use App\Models\User;
 
 use Illuminate\Validation\Rules;
 use Illuminate\Support\Facades\Password;
-use App\Models\Designation;
 use Illuminate\Support\Str;
 class UserController extends Controller
 {
@@ -43,10 +42,9 @@ class UserController extends Controller
             abort(403);
         }
         $roles = Role::where('role_for','Admin')->get();
-        $designations = Designation::all();
+     
         return view('backend.users.create')
-        ->withRoles($roles)
-        ->withDesignations($designations);
+        ->withRoles($roles);
 
     }
 
@@ -82,7 +80,6 @@ class UserController extends Controller
             'username' => $username,
             'status' => $request->status,
             'email' => $request->email,
-            'designation_id' => $request->designation_id,
             'password' => Hash::make($request->password),
         ]);
 
@@ -136,11 +133,9 @@ class UserController extends Controller
 
         $user = User::findOrFail($id);
         $roles = Role::where('role_for','Admin')->get();
-        $designations = Designation::all();
         return view('backend.users.edit')
         ->withUser($user)
-        ->withRoles($roles)
-        ->withDesignations($designations);
+        ->withRoles($roles);
     }
 
     /**
@@ -170,7 +165,6 @@ class UserController extends Controller
         // $user->username = $request->username;
         $user->email = $request->email;
         $user->status = $request->status;
-        $user->designation_id = $request->designation_id;
         // $user->password = Hash::make($request->password);
         if(isset($request->roles)){
             $user->roles()->detach();

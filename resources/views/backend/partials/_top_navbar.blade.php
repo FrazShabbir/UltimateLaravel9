@@ -42,7 +42,6 @@
                    <img src="{{asset('backend/images/user/01.jpg')}}" class="img-fluid rounded mr-3" alt="user">
                    <div class="caption">
                       <h6 class="mb-0 line-height">{{ getFullName() }}</h6>
-                      <p class="mb-0">{{getuser()->designation->name ?? 'NEW' }}</p>
                    </div>
                 </a>
                 <div class="iq-sub-dropdown iq-user-dropdown">
@@ -50,7 +49,7 @@
                       <div class="iq-card-body p-0 ">
                          <div class="bg-primary p-3">
                             <h5 class="mb-0 text-white line-height">Settings</h5>
-                            {{-- <span class="text-white font-size-12">{{getuser()->designation->name ?? 'NEW' }}</span> --}}
+                            {{-- <span class="text-white font-size-12">New</span> --}}
                          </div>
                          <a href="{{route('site.myProfile')}}" class="iq-sub-card iq-bg-primary-hover">
                             <div class="media align-items-center">

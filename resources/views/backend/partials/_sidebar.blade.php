@@ -54,29 +54,7 @@
         {{-- USER MANAGEMENT END --}}
         {{-- @endif --}}
 
-        {{-- Designations ONLY FOR SUPER ADMIN --}}
-        <li @if (in_array(request()->route()->getName(),
-            ['designations.create', 'designations.edit', 'designations.index', 'designations.show'])) class="active" @endif>
-            <a href="#designations" class="iq-waves-effect" data-toggle="collapse"
-                @if (in_array(request()->route()->getName(),
-                    ['designations.create', 'designations.edit', 'designations.index', 'designations.show'])) aria-expanded="true" @else aria-expanded="false" @endif><span
-                    class="ripple rippleEffect"></span><i
-                    class="las la-user-tie iq-arrow-left"></i><span>Designations</span><i
-                    class="ri-arrow-right-s-line iq-arrow-right"></i></a>
-            <ul id="designations" class="iq-submenu collapse" data-parent="#iq-sidebar-toggle" style="">
-                @can('Create Designations')
-                    <li class="{{ request()->route()->getName() == 'designations.create'? 'active': '' }}"><a
-                            href="{{ route('designations.create') }}"><i class="las la-plus-circle"></i>Add
-                            Designation</a></li>
-                @endcan
-                @can('Read Designations')
-                    <li class="{{ request()->route()->getName() == 'designations.index'? 'active': '' }}"><a
-                            href="{{ route('designations.index') }}"><i class="las la-th-list"></i>All Designations</a>
-                    </li>
-                @endcan
-            </ul>
-        </li>
-        {{-- Designations Edn --}}
+     
 
         <li @if (in_array(request()->route()->getName(),
             ['slider.index', 'slider.create'])) class="active" @endif>
